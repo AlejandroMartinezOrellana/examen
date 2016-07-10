@@ -31,10 +31,12 @@ and open the template in the editor.
                     <p>
                         Rut</p>
                 </td>
+                
                 <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
                     <p>
-                        <br>
+                        <P><input type="text" name="rut" id="rut"/>
+			</P>
                     </p>
                 </td>
                 <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
@@ -45,7 +47,8 @@ and open the template in the editor.
                 <td colspan="2" width="132" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
                     <p>
-                        <br>
+                        <P><input type="text" name="direccion" id="direccion"/>
+			</P>
                     </p>
                 </td>
             </tr>
@@ -58,7 +61,8 @@ and open the template in the editor.
                 <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
                     <p>
-                        <br>
+                        <P><input type="text" name="nombre" id="nombre"/>
+			</P>
                     </p>
                 </td>
                 <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
@@ -69,7 +73,8 @@ and open the template in the editor.
                 <td colspan="2" width="132" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
                     <p>
-                        <br>
+                        <P><input type="text" name="rut" id="rut"/>
+			</P>
                     </p>
                 </td>
             </tr>

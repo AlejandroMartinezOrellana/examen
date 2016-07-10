@@ -11,6 +11,5 @@
         <?php
             require 'menu.php';
         ?>
-        HOME
     </body>
 </html>
