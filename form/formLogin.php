@@ -6,8 +6,11 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+        <link rel="stylesheet" href="../css/Style2.css" >
+        <script type="text/javascript" src="../js/validaciones.js" charset="utf-8"></script>
+	<title>Login</title>
+
     </head>
     <!-- URL de prueba http://jsfiddle.net/33hmj/ -->
     <script src="js/md5/md5.js"></script>

@@ -6,8 +6,11 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+        <link rel="stylesheet" href="../css/Style2.css" >
+        <script type="text/javascript" src="../js/validaciones.js" charset="utf-8"></script>
+	<title>Registro</title>
+
     </head>
     <!-- URL de prueba http://jsfiddle.net/33hmj/ -->
     <script src="js/md5/md5.js"></script>
@@ -79,7 +82,7 @@ and open the template in the editor.
 			</P>
 		</TD>
 		<TD WIDTH=155 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
-			<P><input type="button" name="enviar" value ="Enviar" onclick="Validar()">
+			<P><input type="button" name="Registrar" value ="Registrar" onclick="Validar()">
 			</P>
 		</TD>
 	</TR>
