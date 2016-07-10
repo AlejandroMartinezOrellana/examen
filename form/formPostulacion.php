@@ -73,8 +73,9 @@ and open the template in the editor.
                 <td colspan="2" width="132" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
                     <p>
-                        <P><input type="text" name="rut" id="rut"/>
-			</P>
+                        <P>
+                            
+                        </P>
                     </p>
                 </td>
             </tr>
@@ -87,7 +88,8 @@ and open the template in the editor.
                 <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
                     <p>
-                        <br>
+                        <P><input type="text" name="apellido" id="apellido"/>
+			</P>
                     </p>
                 </td>
                 <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
@@ -98,7 +100,9 @@ and open the template in the editor.
                 <td colspan="2" width="132" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
                     <p>
-                        <br>
+                        <P>
+                            
+			</P>
                     </p>
                 </td>
             </tr>
@@ -111,7 +115,8 @@ and open the template in the editor.
                 <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
                     <p>
-                        <br>
+                        <P><input type="text" name="apellido_materno" id="rut"/>
+			</P>
                     </p>
                 </td>
                 <td colspan="3" width="279" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
@@ -214,8 +219,14 @@ and open the template in the editor.
                 </td>
                 <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
                     padding-left: 0.08in; padding-right: 0.08in">
+                    <p>  
+                        <input type="text" name="email" id="email"/>
+                    </p>
+                </td>
+                <td width="133" style="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in;
+                    padding-left: 0.08in; padding-right: 0.08in">
                     <p style="margin-bottom: 0in; line-height: 100%">
-                        <br>
+                        
                     </p>
                 </td>
             </tr>
