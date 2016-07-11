@@ -17,20 +17,30 @@ and open the template in the editor.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <body>
         <form id="acceso" action="index.php" method="post">
-        <fieldset>
-        <legend>Personal information</legend>
-        Usuario:<br>
-        <input type="text" name="usuario" id="usuario"><br>
-        Clave:<br>
-        <input type="text" name="clave" id="clave"><br>
-            <br>
-            <div id="mensaje"></div>
-            <input type="button" name="enviar" value ="Enviar" onclick="Validar()">
-            
-        </fieldset>
-</form>
-        
+            <fieldset>
+                <br>
+                </br>
+                <legend>Personal information</legend>
+                    <br>
+                    </br>
+                Usuario:
+                <br>
+                    <input type="text" name="usuario" id="usuario">
+                </br>
+                Clave:
+                <br>
+                    <p>
+                        <input type="text" name="clave" id="clave">
+                
+                        <div id="mensaje">
+                             <input type="button" name="enviar" value ="Enviar" onclick="Validar()">
+                        </div>
+                    </p>
+                </br>
+            </fieldset>
+        </form>      
     </body>
+    
     <script> 
         function Validar(){
         var clave;

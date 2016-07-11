@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="../css/estiloestandar.css.css" >
         <script type="text/javascript" src="../js/validaciones.js" charset="utf-8"></script>
 	<title></title>
-
     </head>
 <!-- URL de prueba http://jsfiddle.net/33hmj/ -->
 <script src="js/md5/md5.js"></script>
@@ -35,5 +34,6 @@
                             <input type="submit" value="Buscar" />
                 </fieldset>
             </fieldset>
+       </form>   
     </body>
 </html>
