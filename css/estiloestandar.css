@@ -1,0 +1,184 @@
+    /*****Estilo estandar *****/
+	/*Selector universal*/
+     *{ 
+      margin: 0px; 
+      padding: 0px; 
+     } 
+ /*Le entregamos jerarquia a nuestro titulos*/
+    h1 { 
+      font: bold 20px verdana, sans-serif; 
+     } 
+     h2 { 
+     font: bold 14px verdana, sans-serif; 
+     }
+	 
+     /*Seleccionamos los elementos de la plantilla*/	 
+     header, section, footer, aside, nav, article, figure, figcaption, 
+     hgroup{ 
+     display: block; 
+     } 
+
+ 
+     /*Se crea la caja principal*/
+     #agrupar { 
+     width: 960px; 
+     margin: 15px auto; 
+     text-align: left; 
+     }
+     /*Creacion de la cabecera*/
+     #cabecera { 
+     background: #D57909; 
+     border: 10px solid #FFFFFF; 
+     padding: 50px; 
+     } 
+	 /*Creacion del menu*/
+	 #menu { 
+     background:#3B2306; 
+     padding: 5px 15px; 
+     } 
+	 /* contenido del menu*/
+	 #menu a{
+	 text-decoration:none;
+	 color: #FFFFFF;
+	 }
+	 #menu ul{
+	    text-align:center;
+	 }
+     #menu li { 
+     display: inline-block; 
+     list-style: none; 
+     padding: 5px; 
+     font: bold 14px verdana, sans-serif; 
+     } 
+	 #seccion { 
+     float: left; 
+     width: 660px; 
+     margin: 20px; 
+     } 
+     #columna { 
+     float: left; 
+     width: 220px; 
+     margin: 20px 0px; 
+     padding: 20px; 
+     background: #AC6003;
+     	 
+     }
+	 #pie { 
+     clear: both;
+     text-align: center; 
+     padding: 100px;  
+	 }
+	 div{
+     -moz-box-sizing: border-box; 
+     -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+     } 
+	 #cabecera h1{
+	  text-align:center;
+	  font-family: calibri;
+	  font-size: 30px;
+	  color: white;
+	 } 
+	 #cabecera h2{
+	  text-align:center;
+	  font-family: calibri;
+	  font-size: 30px;
+	  color: white;
+	 } 
+    .formulario h2 {
+    background: none repeat scroll 0 0 #D57909;
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: block;
+    font-family: calibri;
+    font-size: 20px;
+    padding: 5px;
+    text-shadow: 1px 1px 1px #D57909;
+    width: 433px;
+    }
+
+    .formulario ul {
+    width:500px;
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+    }
+    .formulario li{
+    padding:12px; 
+    position:relative;
+    } 
+    .formulario label {
+    color: #555555;
+    display: inline-block;
+    float: left;
+    font-family: calibri;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 3px;
+    width: 90px;
+    }
+    .formulario input {
+    height:20px; 
+    width:220px; 
+    padding:5px 8px;
+    }
+    .formulario textarea {
+    padding:8px; 
+    width:300px;
+    }
+    .formulario button {
+    margin-left:90px;
+    }
+
+    .formulario input, .formulario textarea { 
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+    color: #888;
+    font-size: 12px;
+    padding-right:30px;
+    -moz-transition: padding .25s; 
+    -webkit-transition: padding .25s; 
+    -o-transition: padding .25s;
+    transition: padding .25s;
+    }
+    .formulario input:focus, .formulario textarea:focus {
+    background: #fff; 
+    border:1px solid #FFFFFF; 
+    box-shadow: 0 0 3px #aaa; 
+    padding-right:80px;
+    }
+    /*Inicio de session*/
+     .formulario2 h2 {
+    background: none repeat scroll 0 0 #D57909;
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: block;
+    font-family: calibri;
+    font-size: 20px;
+    padding: 5px;
+    text-shadow: 1px 1px 1px #D57909;
+    width:170px;
+    }
+
+    .formulario2 ul {
+    width:200px;
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+    }
+    .formulario2 li{
+    padding:12px; 
+    position:relative;
+    } 
+    .formulario2 input {
+    height:20px; 
+    width:160px; 
+    padding:5px 8px;
+    }
+    .formulario2 button {
+    margin-left:90px;
+    }
+
+   

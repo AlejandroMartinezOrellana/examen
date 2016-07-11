@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-        <link rel="stylesheet" href="../css/Style2.css" >
+        <link rel="stylesheet" href="../css/estiloestandar.css" >
         <script type="text/javascript" src="../js/validaciones.js" charset="utf-8"></script>
 	<title>Login</title>
 
@@ -18,11 +18,11 @@ and open the template in the editor.
     <body>
         <form id="acceso" action="index.php" method="post">
         <fieldset>
-        <legend>Personal information:</legend>
+        <legend>Personal information</legend>
         Usuario:<br>
         <input type="text" name="usuario" id="usuario"><br>
         Clave:<br>
-            <input type="text" name="clave" id="clave"><br>
+        <input type="text" name="clave" id="clave"><br>
             <br>
             <div id="mensaje"></div>
             <input type="button" name="enviar" value ="Enviar" onclick="Validar()">
