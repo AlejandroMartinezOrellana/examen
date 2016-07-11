@@ -3,7 +3,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
         <link rel="stylesheet" href="../css/estiloestandar.css.css" >
         <script type="text/javascript" src="../js/validaciones.js" charset="utf-8"></script>
-	<title></title>
+	<title>Buscar</title>
     </head>
 <!-- URL de prueba http://jsfiddle.net/33hmj/ -->
 <script src="js/md5/md5.js"></script>

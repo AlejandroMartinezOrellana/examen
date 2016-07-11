@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -11,9 +5,7 @@ and open the template in the editor.
         <script type="text/javascript" src="../js/validaciones.js" charset="utf-8"></script>
 	<title>Login</title>
 
-    </head>
-    <!-- URL de prueba http://jsfiddle.net/33hmj/ -->
-    <script src="js/md5/md5.js"></script>
+    </head>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <body>
         <form id="acceso" action="index.php" method="post">
