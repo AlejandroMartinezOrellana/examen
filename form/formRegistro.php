@@ -16,7 +16,7 @@ and open the template in the editor.
     <script src="js/md5/md5.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <body>
-        <form id="acceso" action="index.php" method="post">
+        <form id="acceso" action="index.php" method="post"></form>
             <fieldset>
             <legend>Formulario de Registro</legend>
                 <TABLE WIDTH=321 CELLPADDING=7 CELLSPACING=0 STYLE="page-break-before: always">

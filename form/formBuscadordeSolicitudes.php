@@ -11,30 +11,29 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <body>
        <form id="acceso" action="index.php" method="post">
-    <fieldset>
-        <legend>Buscador de solicitudes</legend>
-        <br>
-        </br>
             <fieldset>
-                <legend>Buscador por rut</legend>
-                <P>RUT 
-                    <input name="rut" value="" type="text" />
-                    <input type="submit" value="Buscar" />
-                </p>          
+                <legend>Buscador de solicitudes</legend>
+                    <br>
+                    </br>
+                <fieldset>
+                    <legend>Buscador por rut</legend>
+                        <P>RUT 
+                            <input name="rut" value="" type="text" />
+                            <input type="submit" value="Buscar" />
+                        </p>          
+                </fieldset>
+                    <br>
+                    </br>    
+                <fieldset>  
+                    <legend>Buscador por fecha</legend>
+                        <p>
+                            Desde
+                            <input type="date">
+                            Hasta
+                            <input type="date">
+                        </p>
+                            <input type="submit" value="Buscar" />
+                </fieldset>
             </fieldset>
-        <br>
-        </br>    
-            <fieldset>  
-                <legend>Buscador por fecha</legend>
-                <p>
-                    Desde
-                    <input type="date">
-                    Hasta
-                    <input type="date">
-                    <input type="submit" value="Buscar" />
-                </p>
-            </fieldset>
-
-
-</body>
+    </body>
 </html>
