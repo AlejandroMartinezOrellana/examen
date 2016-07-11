@@ -10,11 +10,9 @@
     <body>
         <form id="acceso" action="index.php" method="post">
             <fieldset>
-                <br>
-                </br>
                 <legend>Personal information</legend>
-                    <br>
-                    </br>
+                <br>
+                </br>  
                 Usuario:
                 <br>
                     <input type="text" name="usuario" id="usuario">
