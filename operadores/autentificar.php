@@ -1,5 +1,5 @@
 <?php
-   require_once '../model/model_usuario.php';
+   require_once '../clases/Usuario.php';
    $model_usuario = new ModelUsuario();
     if($_SERVER['REQUEST_METHOD']=='POST'){
     	$correo = $_POST['authcorreo'];
@@ -14,13 +14,13 @@
 		    exit();
 		}else{
 			header('Status: 301 Moved permantly', false, 301);
-		    header('Location:/CertificaDev/inicio.php');
+		    header('Location:/CertificaDev/menu.php');
 		    exit();
 		}
 		
     }else{
     	header('Status: 301 Moved permantly', false, 301);
-		header('Location:/CertificaDev/inicio.php');
+		header('Location:/CertificaDev/menu.php');
 		exit();
     }
 ?>

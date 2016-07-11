@@ -16,7 +16,7 @@
 		
 	 }else{
 	 	header('Status: 301 Moved permantly', false, 301);
-		header('Location:/CertificaDev/inicio.php');
+		header('Location:/CertificaDev/menu.php');
 		exit();
 	 }
 	
