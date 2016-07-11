@@ -1,29 +1,40 @@
 <html 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-        <link rel="stylesheet" href="../css/Style2.css" >
+        <link rel="stylesheet" href="../css/estiloestandar.css.css" >
         <script type="text/javascript" src="../js/validaciones.js" charset="utf-8"></script>
-	<title>ejemplo</title>
+	<title></title>
 
     </head>
-
+<!-- URL de prueba http://jsfiddle.net/33hmj/ -->
+<script src="js/md5/md5.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <body>
-       <form method="post" action="">
-<label for="rut">Ingresa tu RUT para validar</label>
-<input name="rut" value="" type="text" />
-<input type="submit" value="probar" />
-</form>
-<div>
-<?php 
-require '../validacion/rut.php';
-if($_POST['rut']){
-    if(RutValidate($_POST['rut'])==true){
-        echo "El rut ".$_POST['rut']." es correcto";
-    }else{
-         echo "El rut ".$_POST['rut']." no es incorrecto";
-    }
-}
+       <form id="acceso" action="index.php" method="post">
+    <fieldset>
+        <legend>Buscador de solicitudes</legend>
+        <br>
+        </br>
+            <fieldset>
+                <legend>Buscador por rut</legend>
+                <P>RUT 
+                    <input name="rut" value="" type="text" />
+                    <input type="submit" value="Buscar" />
+                </p>          
+            </fieldset>
+        <br>
+        </br>    
+            <fieldset>  
+                <legend>Buscador por fecha</legend>
+                <p>
+                    Desde
+                    <input type="date">
+                    Hasta
+                    <input type="date">
+                    <input type="submit" value="Buscar" />
+                </p>
+            </fieldset>
 
-?>
 
+</body>
 </html>
