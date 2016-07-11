@@ -1,6 +1,7 @@
 <?php 
     require 'TituloPag.php';
 ?>
+
 <html>
     <link href="estilos.css" rel="stylesheet" type="text/css"/>
     <head>
