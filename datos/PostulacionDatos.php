@@ -48,7 +48,7 @@ class PostulacionDatos{
 		$empresa = new Postulante();
 		$empresa->nombre=$nombre;
 		$empresa->rut=$rut;
-		mysqli_select_db($con,"scripts");// nombre de database
+		mysqli_select_db($con,"scripts");// 
 		$sql = " SELECT * FROM FormularioPostulacion WHERE nombre='".$Postulante->nombre."' AND rut='".$Postulante->rut."'";
 
 		$consulta = mysqli_query($con,$sql);
@@ -71,7 +71,7 @@ class PostulacionDatos{
 		$Postulante = new Postulante();
 		$Postulante->nombre=$nombre;
 		$Postulante->password=$rut;
-		mysqli_select_db($con,"scripts");// nombre de database
+		mysqli_select_db($con,"scripts");
 		$sql = " DELETE FROM FormularioPostulacion  WHERE nombre='".$Postulante->nombre."' AND rut='".$Postulante->rut."'";
 			
 		if(mysqli_query($con,$sql)){
@@ -92,7 +92,7 @@ class PostulacionDatos{
 		$Postulante = new Postulante();
 		$Postulante->nombre=$nombre;
 		$Postulante->rut=$rut;
-		mysqli_select_db($con,"scripts");// nombre de database
+		mysqli_select_db($con,"scripts");
 		$sql = " UPDATE  FormularioPostulacion SET nombre='".$Postulante->nombre."' WHERE rut='".$Postulante->rut."'";
 			
 		if(mysqli_query($con,$sql)){
@@ -104,17 +104,5 @@ class PostulacionDatos{
 		mysqli_close($con);		
 	}
 }
-
-//declaramos nuevo objeto
-
-//$obj = new empresaDatos();
-//if($obj->insertarEmpresa("Falabella S.A.","77.261.280-K","falabella@gmail.com","Gral Pedro Pablo Dartnell 1741","Unipersonal","13","Falabella","Hogar","")){
-//	echo "se insertó empresa :D";
-//}else{
-//	echo "no pasó nah :/";
-//}
-
-
-
 
 ?>

@@ -1,5 +1,5 @@
 <?php 
-include "../entidades/usuario.php";
+include "../clases/usuario.php";
 include "conexion.php";
 
 class usuarioDatos{
@@ -10,7 +10,7 @@ class usuarioDatos{
 		$usuario = new usuario();
 		$usuario->username=$username;
 		$usuario->password=$password;
-		mysqli_select_db($con,"solostock");// nombre de database
+		mysqli_select_db($con,"scripts");
 		$sql = "INSERT INTO Usuario(username,password) VALUES('".$usuario->username."', '".$usuario->password."') ";
 			
 		if(mysqli_query($con,$sql)){
@@ -29,7 +29,7 @@ class usuarioDatos{
 		$usuario = new usuario();
 		$usuario->username=$username;
 		$usuario->password=$password;
-		mysqli_select_db($con,"solostock");// nombre de database
+		mysqli_select_db($con,"scripts");
 		$sql = " SELECT * FROM USUARIO WHERE username='".$usuario->username."' AND password='".$usuario->password."'";
 
 		$consulta = mysqli_query($con,$sql);
@@ -52,7 +52,7 @@ class usuarioDatos{
 		$usuario = new usuario();
 		$usuario->username=$username;
 		$usuario->password=$password;
-		mysqli_select_db($con,"solostock");// nombre de database
+		mysqli_select_db($con,"scripts");
 		$sql = " DELETE FROM USUARIO WHERE username='".$usuario->username."' AND password='".$usuario->password."'";
 			
 		if(mysqli_query($con,$sql)){
@@ -73,7 +73,7 @@ class usuarioDatos{
 		$usuario = new usuario();
 		$usuario->username=$username;
 		$usuario->password=$password;
-		mysqli_select_db($con,"solostock");// nombre de database
+		mysqli_select_db($con,"scripts");
 		$sql = " UPDATE  USUARIO SET password='".$usuario->password."' WHERE username='".$usuario->username."'";
 			
 		if(mysqli_query($con,$sql)){
@@ -85,15 +85,6 @@ class usuarioDatos{
 		mysqli_close($con);		
 	}
 }
-
-//declaramos nuevo objeto
-//probando correcta actualizacion de datos a bd
-//$obj = new usuarioDatos();
-//if($obj->actualizaUsuario("coco","pichi")){
-//	echo "se actualizo usuario :D";
-//}else{
-//	echo "no pasó nah :/";
-//}
 
 
 
