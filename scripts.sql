@@ -95,6 +95,8 @@ CREATE TABLE IF NOT EXISTS `scripts`.`FormularioPostulacion` (
   `Educacion` VARCHAR(45) NULL,
   `ExperienciaLab` VARCHAR(45) NULL,
   `AñosLab` INT NULL,
+  `Modalidad` VARCHAR(45) NULL,
+  `Curso` VARCHAR(45) NULL,
   `Admin_idAdmin` INT NOT NULL,
   `Curso_idCurso` INT NOT NULL,
   `FormularioRegistro_idRegistro` INT NOT NULL,

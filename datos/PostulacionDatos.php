@@ -23,7 +23,8 @@ class empresaDatos{
                 $Postulante->modalidad=$Modalidad;
                 $Postulante->curso=$Curso;
 		mysqli_select_db($con,"scripts");// nombre de database
-		$sql = "INSERT INTO empresa( rut_empresa, razon_social, tipo_empresa, email_empresa, direccion_empresa, id_region, nombre_empresa, descripcion_empresa, categoria_empresa) VALUES('".$empresa->rut_empresa."', '".$empresa->razon_social."','".$empresa->tipo_empresa."','".$empresa->email_empresa."','".$empresa->direccion_empresa."','".$empresa->id_region."','".$empresa->nombre_empresa."','".$empresa->descripcion_empresa."','".$empresa->categoria_empresa."')";
+		$sql = "INSERT INTO FormularioPostulacion( nombre, rut, ApellidoPat, ApellidoMat, FechaNac, "
+                        . "sexo, telefono, E_Mail, direccion,comuna,educacion,ExperienciaLab) VALUES('".$empresa->rut_empresa."', '".$empresa->razon_social."','".$empresa->tipo_empresa."','".$empresa->email_empresa."','".$empresa->direccion_empresa."','".$empresa->id_region."','".$empresa->nombre_empresa."','".$empresa->descripcion_empresa."','".$empresa->categoria_empresa."')";
 			
 		if(mysqli_query($con,$sql)){
 			return true;
