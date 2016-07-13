@@ -37,6 +37,37 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `scripts`.`Usuario`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `scripts`.`Usuario` (
+  `idUsuario` INT NOT NULL,
+  `Password` VARCHAR(45) NULL,
+  PRIMARY KEY (`idUsuario`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `scripts`.`FormularioRegistro`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `scripts`.`FormularioRegistro` (
+  `idRegistro` INT NOT NULL,
+  `RutUSer` INT NULL,
+  `NombreUser` VARCHAR(45) NULL,
+  `Apellido_PaternoUser` VARCHAR(45) NULL,
+  `Apellido_MaternoUser` VARCHAR(45) NULL,
+  `PasswordUser` VARCHAR(45) NULL,
+  `Usuario_idUsuario` INT NOT NULL,
+  PRIMARY KEY (`idRegistro`, `Usuario_idUsuario`),
+  INDEX `fk_FormularioRegistro_Usuario1_idx` (`Usuario_idUsuario` ASC),
+  CONSTRAINT `fk_FormularioRegistro_Usuario1`
+    FOREIGN KEY (`Usuario_idUsuario`)
+    REFERENCES `scripts`.`Usuario` (`idUsuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `scripts`.`Solicitud`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `scripts`.`Solicitud` (
@@ -64,20 +95,17 @@ CREATE TABLE IF NOT EXISTS `scripts`.`FormularioPostulacion` (
   `Educacion` VARCHAR(45) NULL,
   `ExperienciaLab` VARCHAR(45) NULL,
   `AñosLab` INT NULL,
-  `Usuario_idUsuario` INT NOT NULL,
   `Admin_idAdmin` INT NOT NULL,
   `Curso_idCurso` INT NOT NULL,
+  `FormularioRegistro_idRegistro` INT NOT NULL,
+  `Usuario_idUsuario` INT NOT NULL,
+  `Usuario_FormularioRegistro_idRegistro` INT NOT NULL,
   `Solicitud_idSolicitud` INT NOT NULL,
-  PRIMARY KEY (`Rut`, `Admin_idAdmin`, `Curso_idCurso`),
-  INDEX `fk_FormularioPostulacion_Usuario_idx` (`Usuario_idUsuario` ASC),
+  PRIMARY KEY (`Rut`, `Admin_idAdmin`, `Curso_idCurso`, `FormularioRegistro_idRegistro`, `Usuario_idUsuario`, `Usuario_FormularioRegistro_idRegistro`, `Solicitud_idSolicitud`),
   INDEX `fk_FormularioPostulacion_Admin1_idx` (`Admin_idAdmin` ASC),
   INDEX `fk_FormularioPostulacion_Curso1_idx` (`Curso_idCurso` ASC),
+  INDEX `fk_FormularioPostulacion_FormularioRegistro1_idx` (`FormularioRegistro_idRegistro` ASC),
   INDEX `fk_FormularioPostulacion_Solicitud1_idx` (`Solicitud_idSolicitud` ASC),
-  CONSTRAINT `fk_FormularioPostulacion_Usuario`
-    FOREIGN KEY (`Usuario_idUsuario`)
-    REFERENCES `scripts`.`Usuario` (`idUsuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_FormularioPostulacion_Admin1`
     FOREIGN KEY (`Admin_idAdmin`)
     REFERENCES `scripts`.`Admin` (`idAdmin`)
@@ -88,49 +116,14 @@ CREATE TABLE IF NOT EXISTS `scripts`.`FormularioPostulacion` (
     REFERENCES `scripts`.`Curso` (`idCurso`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
+  CONSTRAINT `fk_FormularioPostulacion_FormularioRegistro1`
+    FOREIGN KEY (`FormularioRegistro_idRegistro`)
+    REFERENCES `scripts`.`FormularioRegistro` (`idRegistro`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
   CONSTRAINT `fk_FormularioPostulacion_Solicitud1`
     FOREIGN KEY (`Solicitud_idSolicitud`)
     REFERENCES `scripts`.`Solicitud` (`idSolicitud`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `scripts`.`FormularioRegistro`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `scripts`.`FormularioRegistro` (
-  `idRegistro` INT NOT NULL,
-  `Rut` INT NULL,
-  `Nombre` VARCHAR(45) NULL,
-  `Apellido_Paterno` VARCHAR(45) NULL,
-  `Apellido_Materno` VARCHAR(45) NULL,
-  `Password` VARCHAR(45) NULL,
-  `FormularioPostulacion_Rut` INT NOT NULL,
-  `FormularioPostulacion_Admin_idAdmin` INT NOT NULL,
-  `FormularioPostulacion_Curso_idCurso` INT NOT NULL,
-  PRIMARY KEY (`idRegistro`, `FormularioPostulacion_Rut`, `FormularioPostulacion_Admin_idAdmin`, `FormularioPostulacion_Curso_idCurso`),
-  INDEX `fk_FormularioRegistro_FormularioPostulacion1_idx` (`FormularioPostulacion_Rut` ASC, `FormularioPostulacion_Admin_idAdmin` ASC, `FormularioPostulacion_Curso_idCurso` ASC),
-  CONSTRAINT `fk_FormularioRegistro_FormularioPostulacion1`
-    FOREIGN KEY (`FormularioPostulacion_Rut` , `FormularioPostulacion_Admin_idAdmin` , `FormularioPostulacion_Curso_idCurso`)
-    REFERENCES `scripts`.`FormularioPostulacion` (`Rut` , `Admin_idAdmin` , `Curso_idCurso`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `scripts`.`Usuario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `scripts`.`Usuario` (
-  `idUsuario` INT NOT NULL,
-  `Password` VARCHAR(45) NULL,
-  `FormularioRegistro_idRegistro` INT NOT NULL,
-  PRIMARY KEY (`idUsuario`, `FormularioRegistro_idRegistro`),
-  INDEX `fk_Usuario_FormularioRegistro1_idx` (`FormularioRegistro_idRegistro` ASC),
-  CONSTRAINT `fk_Usuario_FormularioRegistro1`
-    FOREIGN KEY (`FormularioRegistro_idRegistro`)
-    REFERENCES `scripts`.`FormularioRegistro` (`idRegistro`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
