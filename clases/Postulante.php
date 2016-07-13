@@ -1,6 +1,6 @@
 <?php 
 
-class empresa{
+class Postulante{
 	
 	
 	public $rut;
@@ -109,6 +109,14 @@ class empresa{
 
 	function set_experiencia_progamacion($experiencia_progamacion){
 		$this->experiencia_progamacion =$experiencia_progamacion;
+	}    
+                 public $años;
+	function get_años(){
+		return $this->años;
+	}
+
+	function set_años($AñosLAB){
+		$this->años =$AñosLAB;
 	}    
         
             public $modalidad;

@@ -2,8 +2,8 @@
 include "../clases/Postulante.php";
 include "conexion.php";
 
-class empresaDatos{
-	function insertarEmpresa($nombre,$rut,$apellidoPat,$apellidoMat,$FechaNac,$Sexo,$Telefono,$Email,$Direccion,$Comuna,$Educacion,$ExpArea,$Modalidad,$Curso){
+class PostulacionDatos{
+	function insertarPostulacnte($nombre,$rut,$apellidoPat,$apellidoMat,$FechaNac,$Sexo,$Telefono,$Email,$Direccion,$Comuna,$Educacion,$ExpArea,$AñosLAB,$Modalidad,$Curso){
 		$cnn = new conexion();
 		$con = $cnn->conectar();
 
@@ -20,11 +20,17 @@ class empresaDatos{
                 $Postulante->comuna=$Comuna;
                 $Postulante->educacion=$Educacion;
                 $Postulante->experiencia_programacion=$ExpArea;
+                $Postulante->años=$AñosLAB;
                 $Postulante->modalidad=$Modalidad;
                 $Postulante->curso=$Curso;
 		mysqli_select_db($con,"scripts");// nombre de database
 		$sql = "INSERT INTO FormularioPostulacion( nombre, rut, ApellidoPat, ApellidoMat, FechaNac, "
-                        . "sexo, telefono, E_Mail, direccion,comuna,educacion,ExperienciaLab) VALUES('".$empresa->rut_empresa."', '".$empresa->razon_social."','".$empresa->tipo_empresa."','".$empresa->email_empresa."','".$empresa->direccion_empresa."','".$empresa->id_region."','".$empresa->nombre_empresa."','".$empresa->descripcion_empresa."','".$empresa->categoria_empresa."')";
+                        . "sexo, telefono, E_Mail, direccion,comuna,educacion,ExperienciaLab,AñosLab,modalidad,curso) "
+                        . "VALUES('".$Postulante->nombre."', '".$Postulante->rut."','".
+                        $Postulante->apellido_paterno."','".$Postulante->apellido_materno."','".$Postulante->fecha_nacimiento."','".
+                        $Postulante->sexo."','".$Postulante->telefono."','".$Postulante->E_Mail."','".
+                        $Postulante->direccion."','".$Postulante->comuna."','".$Postulante->educacion."','".$Postulante->experiencia_programacion."','"
+                        .$Postulante->años."','".$Postulante->modalidad   ."','".$Postulante->curso."')";
 			
 		if(mysqli_query($con,$sql)){
 			return true;
@@ -35,20 +41,20 @@ class empresaDatos{
 		mysqli_close($con);		
 	}
 
-	function validar($nombre_empresa,$rut_empresa){
+	function validar($nombre,$rut){
 		$cnn = new conexion();
 		$con = $cnn->conectar();
 
-		$empresa = new empresa();
-		$empresa->nombre_empresa=$nombre_empresa;
-		$empresa->rut_empresa=$rut_empresa;
-		mysqli_select_db($con,"solostock");// nombre de database
-		$sql = " SELECT * FROM EMPRESA WHERE nombre_empresa='".$empresa->nombre_empresa."' AND rut_empresa='".$empresa->rut_empresa."'";
+		$empresa = new Postulante();
+		$empresa->nombre=$nombre;
+		$empresa->rut=$rut;
+		mysqli_select_db($con,"scripts");// nombre de database
+		$sql = " SELECT * FROM FormularioPostulacion WHERE nombre='".$Postulante->nombre."' AND rut='".$Postulante->rut."'";
 
 		$consulta = mysqli_query($con,$sql);
 		$fila = mysqli_fetch_array($consulta);
 		if($fila>0){
-			if($fila["nombre_empresa"] == $empresa->nombre_empresa && $fila["rut_empresa"] == $empresa->rut_empresa){
+			if($fila["nombre"] == $Postulante->nombre && $fila["rut"] == $Postulante->rut){
 				return true;
 			}			
 		}else{
@@ -58,15 +64,15 @@ class empresaDatos{
 	}
 
 
-	function eliminarEmpresa($nombre_empresa,$rut_empresa){
+	function eliminarPostulante($nombre,$rut){
 		$cnn = new conexion();
 		$con = $cnn->conectar();
 
-		$empresa = new empresa();
-		$empresa->nombre_empresa=$nombre_empresa;
-		$empresa->password=$rut_empresa;
-		mysqli_select_db($con,"solostock");// nombre de database
-		$sql = " DELETE FROM EMPRESA WHERE nombre_empresa='".$empresa->nombre_empresa."' AND rut_empresa='".$empresa->rut_empresa."'";
+		$Postulante = new Postulante();
+		$Postulante->nombre=$nombre;
+		$Postulante->password=$rut;
+		mysqli_select_db($con,"scripts");// nombre de database
+		$sql = " DELETE FROM FormularioPostulacion  WHERE nombre='".$Postulante->nombre."' AND rut='".$Postulante->rut."'";
 			
 		if(mysqli_query($con,$sql)){
 			return true;
@@ -79,15 +85,15 @@ class empresaDatos{
 
 
 
-	function actualizaEmpresa($nombre_empresa,$rut_empresa){
+	function actualizaPostulante($nombre,$rut){
 		$cnn = new conexion();
 		$con = $cnn->conectar();
 
-		$empresa = new empresa();
-		$empresa->nombre_empresa=$nombre_empresa;
-		$empresa->rut_empresa=$rut_empresa;
-		mysqli_select_db($con,"solostock");// nombre de database
-		$sql = " UPDATE  EMPRESA SET nombre_empresa='".$empresa->nombre_empresa."' WHERE rut_empresa='".$empresa->rut_empresa."'";
+		$Postulante = new Postulante();
+		$Postulante->nombre=$nombre;
+		$Postulante->rut=$rut;
+		mysqli_select_db($con,"scripts");// nombre de database
+		$sql = " UPDATE  FormularioPostulacion SET nombre='".$Postulante->nombre."' WHERE rut='".$Postulante->rut."'";
 			
 		if(mysqli_query($con,$sql)){
 			return true;
