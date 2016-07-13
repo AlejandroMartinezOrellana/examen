@@ -45,9 +45,9 @@ class PostulacionDatos{
 		$cnn = new conexion();
 		$con = $cnn->conectar();
 
-		$empresa = new Postulante();
-		$empresa->nombre=$nombre;
-		$empresa->rut=$rut;
+		$Postulante = new Postulante();
+		$Postulante->nombre=$nombre;
+		$Postulante->rut=$rut;
 		mysqli_select_db($con,"scripts");// 
 		$sql = " SELECT * FROM FormularioPostulacion WHERE nombre='".$Postulante->nombre."' AND rut='".$Postulante->rut."'";
 

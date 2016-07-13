@@ -1,4 +1,4 @@
 <?php
-    $titulo="Cursos de Certificación CertificaDev";
+    $titulo="Cursos de Certificación 'CertificaDev'";
 ?>
 
