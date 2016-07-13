@@ -41,6 +41,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `scripts`.`Usuario` (
   `idUsuario` INT NOT NULL,
+  `Username` VARCHAR(45) NULL,
   `Password` VARCHAR(45) NULL,
   PRIMARY KEY (`idUsuario`))
 ENGINE = InnoDB;

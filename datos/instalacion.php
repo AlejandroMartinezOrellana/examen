@@ -4,7 +4,7 @@ include "conexion.php";
 function crearTablas(){
 	$cnn = new conexion();
 	$con = $cnn->conectar();
-	mysqli_select_db($con,"solostock");
+	mysqli_select_db($con,"scripts");
 }
 
 
